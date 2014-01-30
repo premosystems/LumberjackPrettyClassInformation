@@ -3,7 +3,7 @@ LumberjackPrettyClassInformation
 
 A CocoaLumberjack log formatter for pretty class information output.
 
-## Usage:
+#### Usage:
 
 ```obj-c
 DDLog addLogger:[DDASLLogger sharedInstance]];
