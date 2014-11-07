@@ -22,6 +22,8 @@ Pod::Spec.new do |s|
   s.author       = { "PremoSystems" => "info@premosystems.com" }
   
   s.source       = { :git => "https://github.com/premosystems/LumberjackPrettyClassInformation.git", :tag => s.version.to_s }
+  
+  spec.ios.deployment_target = "6.0"
 
   s.source_files = 'LogFormatter/PrettyClassInformationLogFormatter.{h,m}'
 
