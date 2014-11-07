@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.resource = 'LumberjackPrettyClassInformation.podspec'
 
-  s.dependency 'CocoaLumberjack', '~>2.0.0-beta4'
+  s.dependency 'CocoaLumberjack', '~>1.9.2'
   
   s.requires_arc = true
 end
