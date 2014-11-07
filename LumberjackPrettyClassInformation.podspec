@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "A CocoaLumberjack log formatter for pretty class information output."
 
   s.description  = <<-DESC
-                   A CocoaLumberjack log formatter for pretty class information output.
+                   A CocoaLumberjack log formatter for prettier class information output.
                    DESC
 
   s.homepage     = "https://github.com/premosystems/LumberjackPrettyClassInformation"
