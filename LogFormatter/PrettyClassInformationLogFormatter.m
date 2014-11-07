@@ -26,7 +26,7 @@
      NSString *threadName;
      */
     NSString *logLevel;
-    switch (logMessage->logFlag)
+    switch (logMessage->_flag)
     {
         case LOG_FLAG_ERROR : logLevel = @"Error"; break;
         case LOG_FLAG_WARN  : logLevel = @"Warning"; break;
@@ -37,13 +37,13 @@
     NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
     [formatter setLocale:[NSLocale currentLocale]];
     [formatter setDateFormat:@"yyyy.MM.dd HH:mm:ss+zzz"];
-    NSString *dateString = [formatter stringFromDate:logMessage->timestamp];
+    NSString *dateString = [formatter stringFromDate:logMessage->_timestamp];
     
-    NSString *longFileName = [NSString stringWithFormat:@"%s",logMessage->file];
+    NSString *longFileName = [NSString stringWithFormat:@"%s",logMessage->_file];
     
     NSString *fileName = [[longFileName componentsSeparatedByString:@"/"] lastObject];
     
-    return [NSString stringWithFormat:@"[%@]:[%@]:[%i]:[%@:%i]:[%s]:%@\n", dateString,logLevel,logMessage->machThreadID,fileName,logMessage->lineNumber,logMessage->function, logMessage->logMsg];
+    return [NSString stringWithFormat:@"[%@]:[%@]:[%i]:[%@:%i]:[%s]:%@\n", dateString,logLevel,logMessage->_threadID,fileName,logMessage->_line,logMessage->_function, logMessage->_message];
 }
 
 @end
