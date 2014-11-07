@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LumberjackPrettyClassInformation"
-  s.version      = "1.0.1"
+  s.version      = "1.1.0"
   s.summary      = "A CocoaLumberjack log formatter for pretty class information output."
 
   s.description  = <<-DESC
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
 
   s.resource = 'LumberjackPrettyClassInformation.podspec'
 
-  s.dependency 'CocoaLumberjack'
+  s.dependency 'CocoaLumberjack', '~>2.0.0-beta4'
   
   s.requires_arc = true
 end
